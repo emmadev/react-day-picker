@@ -592,7 +592,7 @@ export class DayPicker extends Component {
       <div
         {...this.props.containerProps}
         aria-modal="true"
-        aria-labelledby="IDREF"
+        aria-label="Choose Date"
         aria-live="polite"
         role="dialog"
         className={className}
