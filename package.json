@@ -21,6 +21,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "prepare": "npm run build",
     "clean": "rimraf coverage lib",
     "lint": "eslint src test",
     "test": "jest",
