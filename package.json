@@ -21,14 +21,15 @@
     "doc": "docs"
   },
   "scripts": {
+    "prepare": "npm run build",
     "clean": "rimraf coverage lib",
     "lint": "eslint src test",
     "test": "jest",
     "coverage": "jest --coverage",
     "prepublishOnly": "yarn build",
     "prebuild": "rimraf lib umd build",
-    "build": "yarn build:src && yarn build:umd",
-    "build:src": "babel ./src -d ./build --source-maps && yarn build:css",
+    "build": "npm run build:src && npm run build:umd",
+    "build:src": "babel ./src -d ./build --source-maps && npm run build:css",
     "build:umd": "cross-env NODE_ENV=production webpack -p",
     "build:css": "postcss src/style.css --use autoprefixer -d lib/ --no-map"
   },

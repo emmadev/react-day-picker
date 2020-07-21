@@ -150,7 +150,9 @@ export default class Day extends Component {
         onTouchStart={handleEvent(onTouchStart, day, modifiers)}
         onFocus={handleEvent(onFocus, day, modifiers)}
       >
-        {children}
+        <div aria-label={ariaLabel} aria-disabled={ariaDisabled} role="button">
+          {children}
+        </div>
       </div>
     );
   }
