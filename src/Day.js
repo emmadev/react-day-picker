@@ -137,7 +137,6 @@ export default class Day extends Component {
         tabIndex={tabIndex}
         style={style}
         role="gridcell"
-        aria-label={ariaLabel}
         aria-disabled={ariaDisabled}
         aria-selected={ariaSelected}
         onClick={handleEvent(onClick, day, modifiers)}
